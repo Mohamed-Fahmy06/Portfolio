@@ -93,22 +93,35 @@ const Projects = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className={`h-36 overflow-hidden rounded-t-xl relative ${project.id === 1 ? "ring-2 ring-blue-500/50" : ""}`}>
-                {project.id === 1 && (
-                  <>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e14] via-transparent to-transparent z-10 pointer-events-none" />
+              <div className={`h-36 overflow-hidden rounded-t-xl relative ${project.id === 1 ? "bg-[#0b0e14] ring-2 ring-blue-500/50" : ""}`}>
+                {project.id === 1 ? (
+                  <div className="absolute inset-0 flex gap-1 p-1 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="flex-1 flex flex-col gap-1 transform -rotate-12 translate-y-2">
+                       <img src="https://upload.wikimedia.org/wikipedia/en/9/90/Bad_Boys_for_Life_poster.jpg" className="rounded-sm shadow-2xl" alt="" />
+                       <img src="https://upload.wikimedia.org/wikipedia/en/3/34/The_Grudge_2020_Poster.jpeg" className="rounded-sm shadow-2xl" alt="" />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1 transform -rotate-12 -translate-y-4">
+                       <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Birds_of_Prey_%282020_film%29_poster.jpg" className="rounded-sm shadow-2xl" alt="" />
+                       <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Underwater_poster.jpeg" className="rounded-sm shadow-2xl" alt="" />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1 transform -rotate-12 translate-y-6">
+                       <img src="https://upload.wikimedia.org/wikipedia/en/d/de/Gretel_%26_Hansel_-_A_Grim_Fairy_Tale_theatrical_poster.jpeg" className="rounded-sm shadow-2xl" alt="" />
+                       <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Dolittle_%282020_film_poster%29.png" className="rounded-sm shadow-2xl" alt="" />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e14] via-[#0b0e14]/40 to-transparent z-10" />
                     <div className="absolute top-2 left-2 z-20">
-                      <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest shadow-lg">
+                      <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest shadow-lg border border-blue-400/30">
                         Featured
                       </span>
                     </div>
-                  </>
+                  </div>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className="w-full h-full object-cover group-hover:scale-130 transition-transform duration-500"
+                  />
                 )}
-                <img
-                  src={project.image}
-                  alt={project.alt}
-                  className="w-full h-full object-cover group-hover:scale-130 transition-transform duration-500"
-                />
               </div>
               <div className="p-4">
                 <h3

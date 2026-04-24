@@ -44,7 +44,7 @@ const Skills = ({ darkMode }) => {
     },
     {
       name: "JavaScript",
-      level: 20,
+      level: 25,
       icon: <FaNodeJs />,
       color: "from-blue-500 to-indigo-500",
     },
