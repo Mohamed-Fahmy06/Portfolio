@@ -93,9 +93,16 @@ const Projects = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className={`h-36 overflow-hidden rounded-t-xl relative ${project.id === 1 ? "ring-1 ring-orange-500/30" : ""}`}>
+              <div className={`h-36 overflow-hidden rounded-t-xl relative ${project.id === 1 ? "ring-2 ring-blue-500/50" : ""}`}>
                 {project.id === 1 && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e14] via-transparent to-transparent z-10 pointer-events-none" />
+                    <div className="absolute top-2 left-2 z-20">
+                      <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest shadow-lg">
+                        Featured
+                      </span>
+                    </div>
+                  </>
                 )}
                 <img
                   src={project.image}
@@ -105,12 +112,13 @@ const Projects = ({ darkMode }) => {
               </div>
               <div className="p-4">
                 <h3
-                  className="text-lg font-bold mb-2"
+                  className="text-lg font-bold mb-2 flex items-center gap-2"
                   style={{
                     color: darkMode ? "white" : "#1f2937",
                   }}
                 >
                   {project.title}
+                  {project.id === 1 && <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />}
                 </h3>
                 <p
                   className="text-sm mb-3"
@@ -124,10 +132,11 @@ const Projects = ({ darkMode }) => {
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 text-xs rounded-full"
+                      className="px-2 py-1 text-xs rounded-full border border-transparent transition-all"
                       style={{
-                        backgroundColor: darkMode ? "#374151" : "#f3f4f6",
-                        color: darkMode ? "#d1d5db" : "#4b5563",
+                        backgroundColor: project.id === 1 ? (darkMode ? "rgba(37, 99, 235, 0.1)" : "#eff6ff") : (darkMode ? "#374151" : "#f3f4f6"),
+                        color: project.id === 1 ? "#3b82f6" : (darkMode ? "#d1d5db" : "#4b5563"),
+                        borderColor: project.id === 1 ? "rgba(59, 130, 246, 0.2)" : "transparent",
                       }}
                     >
                       {tag}
