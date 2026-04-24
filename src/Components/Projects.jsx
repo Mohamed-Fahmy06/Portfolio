@@ -1,9 +1,9 @@
-import { FaExternalLinkAlt, FaGithub, FaPlay } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import noxeImg from "../assets/Noxe.png";
 import shadow_stalkers from "../assets/shadow-stalkers.png";
 
 const Projects = ({ darkMode }) => {
-  const Projects = [
+  const projectsList = [
     {
       id: 1,
       title: "Noxe",
@@ -16,10 +16,10 @@ const Projects = ({ darkMode }) => {
     },
     {
       id: 2,
-      title: "Code Zone (About page)",
-      des: "Description for Project 2",
-      image: "image",
-      alt: "Project 2",
+      title: "Code Zone",
+      des: "A professional landing page and about section designed with a focus on modern UI/UX principles.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+      alt: "Code Zone",
       tags: ["React", "Tailwind CSS", "JavaScript"],
       codeLink: "https://github.com/Mohamed-Fahmy06/Code-zone-about-page-.git",
       demoLink: "https://code-zone-about-page-bqyc.vercel.app/",
@@ -27,20 +27,12 @@ const Projects = ({ darkMode }) => {
     {
       id: 3,
       title: "Shadow Stalkers",
-      des: "A comprehensive hall and lecture room management system for the Arab Academy, featuring role-based access control and automated reporting.",
+      des: "Comprehensive management system for the Arab Academy featuring role-based access and automated reporting.",
       image: shadow_stalkers,
       alt: "Shadow Stalkers",
       tags: ["React", "Express", "Node.js", "SQL.js", "JWT"],
       codeLink: "https://github.com/Mohamed-Fahmy06/Shadow-stalkers.git",
       demoLink: "https://shadow-stalkers.vercel.app/",
-    },
-    {
-      id: 4,
-      title: "Project 4",
-      des: "Description for Project 4",
-      image: "image",
-      alt: "Project 4",
-      tags: ["Tag 7", "Tag 8"],
     },
   ];
 
@@ -50,13 +42,11 @@ const Projects = ({ darkMode }) => {
       style={{ backgroundColor: darkMode ? "#111827" : "#f9fafb" }}
       className="relative py-24 cursor-default caret-transparent"
     >
-      <div className={`container mx-auto px-4`}>
-        <div className="text-center mb-10" data-aos="fade-up">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2
-            style={{
-              color: darkMode ? "white" : "#1f2937",
-            }}
-            className="sm-text-4xl font-bold mb-3 text-3xl"
+            style={{ color: darkMode ? "white" : "#1f2937" }}
+            className="sm:text-4xl font-bold mb-4 text-3xl"
           >
             My{" "}
             <span
@@ -71,134 +61,108 @@ const Projects = ({ darkMode }) => {
             </span>
           </h2>
           <p
-            className="max-w-xl mx-auto"
-            style={{
-              color: darkMode ? "#d1d5db" : "#6b7280",
-            }}
+            className="max-w-2xl mx-auto text-lg"
+            style={{ color: darkMode ? "#d1d5db" : "#6b7280" }}
           >
-            A show case of my recent projects
+            A showcase of my recent work and technical contributions
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-          {Projects.map((project, index) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {projectsList.map((project, index) => (
             <div
               key={project.id}
               style={{
                 background: darkMode
-                  ? "linear-gradient(to right, #1f2937, #111827)"
-                  : "linear-gradient(to right, #ffffff, #f9fafb)",
+                  ? "linear-gradient(to bottom right, #1f2937, #111827)"
+                  : "linear-gradient(to bottom right, #ffffff, #f9fafb)",
                 borderColor: darkMode ? "#374151" : "#e5e7eb",
               }}
-              className="group rounded-xl border hover:border-orange-500/50 transition-all duration-300"
+              className="group rounded-2xl border hover:border-orange-500/50 transition-all duration-500 overflow-hidden flex flex-col h-full"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className={`h-36 overflow-hidden rounded-t-xl relative ${project.id === 1 ? "bg-[#0b0e14] ring-2 ring-blue-500/50" : ""}`}>
-                {project.id === 1 ? (
-                  <div className="relative h-full w-full group/image">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e14] via-transparent to-transparent z-10" />
-                    <div className="absolute top-2 left-2 z-20">
-                      <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest shadow-lg border border-blue-400/30">
-                        Featured
-                      </span>
-                    </div>
-                    {/* Play Button Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover/image:opacity-100 transition-all duration-500 scale-50 group-hover/image:scale-100">
-                      <div className="w-12 h-12 bg-blue-600/20 backdrop-blur-md rounded-full flex items-center justify-center border border-blue-400/30 shadow-xl shadow-blue-500/20">
-                        <FaPlay className="text-white text-lg ml-1" />
-                      </div>
-                    </div>
-                    <img
-                      src={project.image}
-                      alt={project.alt}
-                      className="w-full h-full object-cover transition-all duration-700 group-hover/image:scale-110 group-hover/image:rotate-1"
-                    />
-                  </div>
-                ) : (
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="w-full h-full object-cover group-hover:scale-130 transition-transform duration-500"
-                  />
-                )}
+              {/* Image Container */}
+              <div className="h-48 overflow-hidden relative group/img">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                <img
+                  src={project.image}
+                  alt={project.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
-              <div className="p-4">
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-grow">
                 <h3
-                  className="text-lg font-bold mb-2 flex items-center gap-2"
-                  style={{
-                    color: darkMode ? "white" : "#1f2937",
-                  }}
+                  className="text-xl font-bold mb-3"
+                  style={{ color: darkMode ? "white" : "#1f2937" }}
                 >
                   {project.title}
-                  {project.id === 1 && <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />}
                 </h3>
                 <p
-                  className="text-sm mb-3"
-                  style={{
-                    color: darkMode ? "#d1d5db" : "#6b7280",
-                  }}
+                  className="text-sm mb-6 line-clamp-3"
+                  style={{ color: darkMode ? "#d1d5db" : "#6b7280" }}
                 >
                   {project.des}
                 </p>
-                <div className="flex flex-wrap gap-1.5 mb-4">
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 text-xs rounded-full border border-transparent transition-all"
+                      className="px-3 py-1 text-xs rounded-full border transition-colors"
                       style={{
-                        backgroundColor: project.id === 1 ? (darkMode ? "rgba(37, 99, 235, 0.1)" : "#eff6ff") : (darkMode ? "#374151" : "#f3f4f6"),
-                        color: project.id === 1 ? "#3b82f6" : (darkMode ? "#d1d5db" : "#4b5563"),
-                        borderColor: project.id === 1 ? "rgba(59, 130, 246, 0.2)" : "transparent",
+                        backgroundColor: darkMode ? "rgba(249, 115, 22, 0.1)" : "#fff7ed",
+                        color: "#f97316",
+                        borderColor: darkMode ? "rgba(249, 115, 22, 0.2)" : "#ffedd5",
                       }}
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3.5 ">
-                  {/* code */}
+
+                {/* Links */}
+                <div className="flex gap-4">
                   <a
                     href={project.codeLink}
                     style={{
                       backgroundColor: darkMode ? "#374151" : "#f3f4f6",
                       color: darkMode ? "white" : "#374151",
                     }}
-                    className="flex flex-1 items-center justify-center gap-1.5 px-3 py-2 text-sm rounded-lg hover:scale-110 hover:opacity-90 transition-colors"
-                    data-aos="zoom-in"
-                    data-aos-delay="300"
+                    className="flex flex-1 items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl hover:scale-105 transition-transform"
                   >
-                    <FaGithub className="text-4xl" /> <span>Code</span>
+                    <FaGithub className="text-xl" /> Code
                   </a>
-                  {/* demo */}
                   <a
                     href={project.demoLink}
                     style={{
                       background: "linear-gradient(to right, #f97316, #f59e0b)",
                     }}
-                    className="flex flex-1 items-center justify-center gap-1.5 px-3 py-2 text-white text-sm rounded-lg 
-                    hover:shadow-orange-500/25 hover:scale-110 transition-all hover:shadow-lg"
-                    data-aos="zoom-in"
-                    data-aos-delay="400"
+                    className="flex flex-1 items-center justify-center gap-2 px-4 py-2.5 text-white text-sm font-medium rounded-xl hover:scale-105 transition-transform shadow-lg shadow-orange-500/20"
                   >
-                    <FaExternalLinkAlt className="text-lg" /> <span>Demo</span>
+                    <FaExternalLinkAlt className="text-sm" /> Demo
                   </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-10 ">
+
+        <div className="text-center">
           <a
-            href="#"
+            href="https://github.com/Mohamed-Fahmy06"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               background: "linear-gradient(to right, #f97316, #f59e0b)",
             }}
-            className="inline-flex items-center gap-2 px-7 py-4 font-semibold text-white text-sm rounded-full 
-                    hover:shadow-orange-500/25 transition-all hover:shadow-lg"
-            data-aos="zoom-in"
-            data-aos-delay="400"
+            className="inline-flex items-center gap-3 px-8 py-4 font-bold text-white text-base rounded-full 
+                    hover:shadow-orange-500/40 transition-all hover:shadow-2xl hover:-translate-y-1"
           >
-            <FaGithub className="text-3xl" /> <span>View all projects</span>
+            <FaGithub className="text-2xl" /> View all projects
           </a>
         </div>
       </div>
@@ -207,4 +171,3 @@ const Projects = ({ darkMode }) => {
 };
 
 export default Projects;
-// deployment trigger
