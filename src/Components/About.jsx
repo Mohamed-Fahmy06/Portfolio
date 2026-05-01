@@ -56,10 +56,23 @@ const About = ({darkMode}) => {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            maiores sequi minima quo inventore tempora voluptates molestiae.
-            Laudantium iusto modi sint recusandae enim dignissimos nemo ipsam
-            molestiae nesciunt? Consequuntur, consectetur?
+            I’m a Full-Stack Web Developer with a strong passion for building
+            scalable, real-world web solutions. I started my journey in web
+            development early during my first year of high school, which gave me
+            a solid technical foundation and a long-term vision in the field. By
+            my second year, I was already working as a trainer, helping others
+            learn web development—an experience that sharpened both my technical
+            depth and my ability to break down complex concepts clearly. Today,
+            as a university student, I focus on turning ideas into functional,
+            user-centered products. I’m not just interested in writing code—I
+            care about performance, user experience, and delivering real value.
+            I enjoy working on projects that solve actual problems and create
+            impact. I’m highly self-driven, constantly learning, and always
+            exploring new technologies to stay ahead. Whether working
+            independently or as part of a team, I bring commitment,
+            adaptability, and a strong growth mindset to everything I do. I’m
+            currently open to freelance opportunities and collaborations where I
+            can contribute, grow, and build meaningful digital experiences.
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8 ">
