@@ -5,9 +5,7 @@ const Contact = ({ darkMode }) => {
     <section
       id="Contact"
       style={{
-        backgroundColor: darkMode
-          ? "#111827"
-          : "#f9fafb",
+        backgroundColor: darkMode ? "#111827" : "#f9fafb",
       }}
       className="py-14 sm:py-16 md:py-20 lg:py-24 overflow-hidden cursor-default caret-transparent"
     >
@@ -19,7 +17,7 @@ const Contact = ({ darkMode }) => {
               color: darkMode ? "white" : "#1f2937",
             }}
           >
-            Get In {" "}
+            Get In{" "}
             <span
               style={{
                 background: "linear-gradient(to right, #f97316, #f59e0b)",
@@ -68,10 +66,23 @@ const Contact = ({ darkMode }) => {
             data-aos="fade-left"
           >
             {/* Web3Forms Access Key */}
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-            <input type="hidden" name="subject" value="New Contact Form Submission" />
+            <input
+              type="hidden"
+              name="access_key"
+              value="0760489b-11a8-49c6-ad9d-1bd21e15d93e"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Contact Form Submission"
+            />
             <input type="hidden" name="from_name" value="Portfolio Website" />
-            <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+            <input
+              type="checkbox"
+              name="botcheck"
+              className="hidden"
+              style={{ display: "none" }}
+            />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
               {/* First Name */}
