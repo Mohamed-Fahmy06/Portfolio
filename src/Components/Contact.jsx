@@ -56,7 +56,8 @@ const Contact = ({ darkMode }) => {
             />
           </div>
           <form
-            action=""
+            action="https://api.web3forms.com/submit"
+            method="POST"
             style={{
               background: darkMode
                 ? "linear-gradient(to right, #1f2937, #111827)"
@@ -66,10 +67,17 @@ const Contact = ({ darkMode }) => {
             className="rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg order1 lg:order-2 caret-white"
             data-aos="fade-left"
           >
+            {/* Web3Forms Access Key */}
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New Contact Form Submission" />
+            <input type="hidden" name="from_name" value="Portfolio Website" />
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
               {/* First Name */}
               <input
                 type="text"
+                name="first_name"
                 placeholder="First Name"
                 style={{
                   backgroundColor: darkMode ? "#374151" : "#faede3",
@@ -83,6 +91,7 @@ const Contact = ({ darkMode }) => {
               {/* Last Name */}
               <input
                 type="text"
+                name="last_name"
                 placeholder="Last Name"
                 style={{
                   backgroundColor: darkMode ? "#374151" : "#faede3",
@@ -97,6 +106,7 @@ const Contact = ({ darkMode }) => {
             {/* Email Address */}
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
               style={{
                 backgroundColor: darkMode ? "#374151" : "#faede3",
@@ -110,6 +120,7 @@ const Contact = ({ darkMode }) => {
             {/* Phone Number */}
             <input
               type="tel"
+              name="phone"
               placeholder="Phone Number"
               style={{
                 backgroundColor: darkMode ? "#374151" : "#faede3",
@@ -122,6 +133,7 @@ const Contact = ({ darkMode }) => {
             />
             {/* Message */}
             <textarea
+              name="message"
               rows="4"
               placeholder="Your Message"
               style={{
