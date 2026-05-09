@@ -1,6 +1,36 @@
+import React, { useState } from "react";
 import contac from "../assets/contac.png";
 
 const Contact = ({ darkMode }) => {
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "0760489b-11a8-49c6-ad9d-1bd21e15d93e");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Message Sent Successfully!");
+      event.target.reset();
+      setTimeout(() => setResult(""), 5000);
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+    setIsSubmitting(false);
+  };
+
   return (
     <section
       id="Contact"
@@ -54,8 +84,7 @@ const Contact = ({ darkMode }) => {
             />
           </div>
           <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
+            onSubmit={onSubmit}
             style={{
               background: darkMode
                 ? "linear-gradient(to right, #1f2937, #111827)"
@@ -65,12 +94,6 @@ const Contact = ({ darkMode }) => {
             className="rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg order1 lg:order-2 caret-white"
             data-aos="fade-left"
           >
-            {/* Web3Forms Access Key */}
-            <input
-              type="hidden"
-              name="access_key"
-              value="0760489b-11a8-49c6-ad9d-1bd21e15d93e"
-            />
             <input
               type="hidden"
               name="subject"
@@ -156,15 +179,22 @@ const Contact = ({ darkMode }) => {
               focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all mb-4 sm:mb-6 resize-none"
               required
             />
-            <input
+            <button
               type="submit"
-              value="Send Message"
+              disabled={isSubmitting}
               style={{
                 background: "linear-gradient(to right, #f97316, #f59e0b)",
               }}
               className="w-full py-2 sm:py-3 text-white font-semibold rounded-lg text-sm sm:text-base
-                hover:shadow-lg hover:shadow-orange-500/25 hover:scale-[1.02] transition-all"
-            />
+                hover:shadow-lg hover:shadow-orange-500/25 hover:scale-[1.02] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
+            {result && (
+              <p className={`mt-4 text-center text-sm font-medium ${result === "Message Sent Successfully!" ? "text-green-500" : "text-red-500"}`}>
+                {result}
+              </p>
+            )}
           </form>
         </div>
       </div>
