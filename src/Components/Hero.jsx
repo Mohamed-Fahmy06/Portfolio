@@ -1,7 +1,7 @@
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import { DownloadIcon, Mail } from "lucide-react";
-import CV from "../assets/CV.pdf";
+import Mohamed_Fahmy_CV from "../assets/Mohamed_Fahmy_CV.pdf";
 import Avatar from "../assets/Avatar.png";
 
 const Hero = ({ darkMode }) => {
@@ -105,7 +105,7 @@ const Hero = ({ darkMode }) => {
                 data-aos-delay="700"
               >
                 <a
-                  href={CV}
+                  href={Mohamed_Fahmy_CV}
                   download
                   className="w-full sm:w-auto inline-flex items-center justify-center text-white
                                   bg-linear-to-r from-orange-500 to-amber-500
