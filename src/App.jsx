@@ -35,17 +35,22 @@ const App = () => {
     <div
       className={
         darkMode
-          ? "bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen"
-          : "bg-linear-to-br from-gray-50 to-blue-50 min-h-screen"
+          ? "bg-[#020617] text-white min-h-screen relative overflow-hidden"
+          : "bg-gray-50 text-gray-900 min-h-screen"
       }
     >
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Hero darkMode={darkMode} />
-      <About darkMode={darkMode} />
-      <Skills darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      <Contact darkMode={darkMode} />
-      <Footer darkMode={darkMode} />
+      {darkMode && (
+        <div className="fixed inset-0 cyber-grid pointer-events-none opacity-20"></div>
+      )}
+      <div className="relative z-10">
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Hero darkMode={darkMode} />
+        <About darkMode={darkMode} />
+        <Skills darkMode={darkMode} />
+        <Projects darkMode={darkMode} />
+        <Contact darkMode={darkMode} />
+        <Footer darkMode={darkMode} />
+      </div>
     </div>
   );
 };

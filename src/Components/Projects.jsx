@@ -62,19 +62,19 @@ const Projects = ({ darkMode }) => {
   return (
     <section
       id="Projects"
-      style={{ backgroundColor: darkMode ? "#111827" : "#f9fafb" }}
+      style={{ backgroundColor: darkMode ? "#020617" : "#f9fafb" }}
       className="relative py-24 cursor-default caret-transparent"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2
             style={{ color: darkMode ? "white" : "#1f2937" }}
-            className="sm:text-4xl font-bold mb-4 text-3xl"
+            className="sm:text-4xl font-bold mb-4 text-3xl font-orbitron"
           >
             My{" "}
             <span
               style={{
-                background: "linear-gradient(to right, #f97316, #f59e0b)",
+                background: "linear-gradient(to right, #00f3ff, #ff00ff)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
@@ -85,7 +85,7 @@ const Projects = ({ darkMode }) => {
           </h2>
           <p
             className="max-w-2xl mx-auto text-lg"
-            style={{ color: darkMode ? "#d1d5db" : "#6b7280" }}
+            style={{ color: darkMode ? "#94a3b8" : "#6b7280" }}
           >
             A showcase of my recent work and technical contributions
           </p>
@@ -97,17 +97,17 @@ const Projects = ({ darkMode }) => {
               key={project.id}
               style={{
                 background: darkMode
-                  ? "linear-gradient(to bottom right, #1f2937, #111827)"
+                  ? "linear-gradient(to bottom right, #0f172a, #020617)"
                   : "linear-gradient(to bottom right, #ffffff, #f9fafb)",
-                borderColor: darkMode ? "#374151" : "#e5e7eb",
+                borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#e5e7eb",
               }}
-              className="group rounded-2xl border hover:border-orange-500/50 transition-all duration-500 overflow-hidden flex flex-col h-full"
+              className="group rounded-2xl border hover:border-[#00f3ff]/50 transition-all duration-500 overflow-hidden flex flex-col h-full hover:shadow-[0_0_30px_rgba(0,243,255,0.1)]"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               {/* Image Container */}
               <div className="h-48 overflow-hidden relative group/img">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10 opacity-80" />
                 <img
                   src={project.image}
                   alt={project.alt}
@@ -118,14 +118,14 @@ const Projects = ({ darkMode }) => {
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3
-                  className="text-xl font-bold mb-3"
+                  className="text-xl font-bold mb-3 font-orbitron group-hover:text-[#00f3ff] transition-colors"
                   style={{ color: darkMode ? "white" : "#1f2937" }}
                 >
                   {project.title}
                 </h3>
                 <p
                   className="text-sm mb-6 line-clamp-3"
-                  style={{ color: darkMode ? "#d1d5db" : "#6b7280" }}
+                  style={{ color: darkMode ? "#94a3b8" : "#6b7280" }}
                 >
                   {project.des}
                 </p>
@@ -135,11 +135,11 @@ const Projects = ({ darkMode }) => {
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 text-xs rounded-full border transition-colors"
+                      className="px-3 py-1 text-xs rounded-full border transition-all font-medium font-orbitron"
                       style={{
-                        backgroundColor: darkMode ? "rgba(249, 115, 22, 0.1)" : "#fff7ed",
-                        color: "#f97316",
-                        borderColor: darkMode ? "rgba(249, 115, 22, 0.2)" : "#ffedd5",
+                        backgroundColor: darkMode ? "rgba(0, 243, 255, 0.05)" : "#f0f9ff",
+                        color: "#00f3ff",
+                        borderColor: darkMode ? "rgba(0, 243, 255, 0.2)" : "#bae6fd",
                       }}
                     >
                       {tag}
@@ -152,19 +152,19 @@ const Projects = ({ darkMode }) => {
                   <a
                     href={project.codeLink}
                     style={{
-                      backgroundColor: darkMode ? "#374151" : "#f3f4f6",
+                      backgroundColor: darkMode ? "#1e293b" : "#f3f4f6",
                       color: darkMode ? "white" : "#374151",
                     }}
-                    className="flex flex-1 items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl hover:scale-105 transition-transform"
+                    className="flex flex-1 items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium rounded-xl hover:scale-105 transition-transform border border-white/5"
                   >
                     <FaGithub className="text-xl" /> Code
                   </a>
                   <a
                     href={project.demoLink}
                     style={{
-                      background: "linear-gradient(to right, #f97316, #f59e0b)",
+                      background: "linear-gradient(to right, #00f3ff, #bc13fe)",
                     }}
-                    className="flex flex-1 items-center justify-center gap-2 px-4 py-2.5 text-white text-sm font-medium rounded-xl hover:scale-105 transition-transform shadow-lg shadow-orange-500/20"
+                    className="flex flex-1 items-center justify-center gap-2 px-4 py-2.5 text-white text-sm font-bold rounded-xl hover:scale-105 transition-transform shadow-lg shadow-[#00f3ff]/20 font-orbitron"
                   >
                     <FaExternalLinkAlt className="text-sm" /> Demo
                   </a>
@@ -180,10 +180,10 @@ const Projects = ({ darkMode }) => {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: "linear-gradient(to right, #f97316, #f59e0b)",
+              background: "linear-gradient(to right, #00f3ff, #ff00ff)",
             }}
-            className="inline-flex items-center gap-3 px-8 py-4 font-bold text-white text-base rounded-full 
-                    hover:shadow-orange-500/40 transition-all hover:shadow-2xl hover:-translate-y-1"
+            className="inline-flex items-center gap-3 px-8 py-4 font-bold text-white text-base rounded-full font-orbitron
+                    hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all hover:shadow-2xl hover:-translate-y-1"
           >
             <FaGithub className="text-2xl" /> View all projects
           </a>

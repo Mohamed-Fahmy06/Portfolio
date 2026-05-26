@@ -35,14 +35,14 @@ const Contact = ({ darkMode }) => {
     <section
       id="Contact"
       style={{
-        backgroundColor: darkMode ? "#111827" : "#f9fafb",
+        backgroundColor: darkMode ? "#020617" : "#f9fafb",
       }}
       className="py-14 sm:py-16 md:py-20 lg:py-24 overflow-hidden cursor-default caret-transparent"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-10 lg:mb-8 " data-aos="fade-up">
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 font-orbitron"
             style={{
               color: darkMode ? "white" : "#1f2937",
             }}
@@ -50,7 +50,7 @@ const Contact = ({ darkMode }) => {
             Get In{" "}
             <span
               style={{
-                background: "linear-gradient(to right, #f97316, #f59e0b)",
+                background: "linear-gradient(to right, #00f3ff, #ff00ff)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
@@ -63,7 +63,7 @@ const Contact = ({ darkMode }) => {
           <p
             className="text-base sm:text-lg md:text-xl"
             style={{
-              color: darkMode ? "#d1d5db" : "#6b7280",
+              color: darkMode ? "#94a3b8" : "#6b7280",
             }}
           >
             I'm always open to discussing new opportunities or interesting
@@ -74,22 +74,23 @@ const Contact = ({ darkMode }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
           {/* Image */}
           <div
-            className="flex justify-center order-2 lg:order-1"
+            className="flex justify-center order-2 lg:order-1 relative group"
             data-aos="fade-right"
           >
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#00f3ff] to-[#ff00ff] rounded-full blur-3xl opacity-10 group-hover:opacity-20 transition duration-1000"></div>
             <img
               src={contac}
               alt=""
-              className="w-full max-w-xs sm:max-w-sm lg:max-w-sm h-auto object-cover"
+              className="relative w-full max-w-xs sm:max-w-sm lg:max-w-sm h-auto object-cover"
             />
           </div>
           <form
             onSubmit={onSubmit}
             style={{
               background: darkMode
-                ? "linear-gradient(to right, #1f2937, #111827)"
+                ? "linear-gradient(to right, #0f172a, #020617)"
                 : "linear-gradient(to right, #ffffff, #f9fafb)",
-              borderColor: darkMode ? "#374151" : "#e5e7eb",
+              borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#e5e7eb",
             }}
             className="rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg order1 lg:order-2 caret-white"
             data-aos="fade-left"
@@ -114,12 +115,12 @@ const Contact = ({ darkMode }) => {
                 name="first_name"
                 placeholder="First Name"
                 style={{
-                  backgroundColor: darkMode ? "#374151" : "#faede3",
-                  borderColor: darkMode ? "#4b5563" : "#d1d5db",
+                  backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                  borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
                   color: darkMode ? "white" : "#1f2973",
                 }}
                 className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all font-medium"
                 required
               />
               {/* Last Name */}
@@ -128,12 +129,12 @@ const Contact = ({ darkMode }) => {
                 name="last_name"
                 placeholder="Last Name"
                 style={{
-                  backgroundColor: darkMode ? "#374151" : "#faede3",
-                  borderColor: darkMode ? "#4b5563" : "#d1d5db",
+                  backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                  borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
                   color: darkMode ? "white" : "#1f2973",
                 }}
                 className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all font-medium"
                 required
               />
             </div>
@@ -143,12 +144,12 @@ const Contact = ({ darkMode }) => {
               name="email"
               placeholder="Email Address"
               style={{
-                backgroundColor: darkMode ? "#374151" : "#faede3",
-                borderColor: darkMode ? "#4b5563" : "#d1d5db",
+                backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
                 color: darkMode ? "white" : "#1f2973",
               }}
               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all mb-4 sm:mb-6"
+              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all mb-4 sm:mb-6 font-medium"
               required
             />
             {/* Phone Number */}
@@ -157,12 +158,12 @@ const Contact = ({ darkMode }) => {
               name="phone"
               placeholder="Phone Number"
               style={{
-                backgroundColor: darkMode ? "#374151" : "#faede3",
-                borderColor: darkMode ? "#4b5563" : "#d1d5db",
+                backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
                 color: darkMode ? "white" : "#1f2973",
               }}
               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all mb-4 sm:mb-6"
+              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all mb-4 sm:mb-6 font-medium"
               required
             />
             {/* Message */}
@@ -171,27 +172,27 @@ const Contact = ({ darkMode }) => {
               rows="4"
               placeholder="Your Message"
               style={{
-                backgroundColor: darkMode ? "#374151" : "#faede3",
-                borderColor: darkMode ? "#4b5563" : "#d1d5db",
+                backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
                 color: darkMode ? "white" : "#1f2973",
               }}
               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all mb-4 sm:mb-6 resize-none"
+              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all mb-4 sm:mb-6 resize-none font-medium"
               required
             />
             <button
               type="submit"
               disabled={isSubmitting}
               style={{
-                background: "linear-gradient(to right, #f97316, #f59e0b)",
+                background: "linear-gradient(to right, #00f3ff, #ff00ff)",
               }}
-              className="w-full py-2 sm:py-3 text-white font-semibold rounded-lg text-sm sm:text-base
-                hover:shadow-lg hover:shadow-orange-500/25 hover:scale-[1.02] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-2 sm:py-3 text-white font-bold rounded-lg text-sm sm:text-base font-orbitron
+                hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] hover:scale-[1.02] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
             {result && (
-              <p className={`mt-4 text-center text-sm font-medium ${result === "Message Sent Successfully!" ? "text-green-500" : "text-red-500"}`}>
+              <p className={`mt-4 text-center text-sm font-bold font-orbitron ${result === "Message Sent Successfully!" ? "text-[#00f3ff]" : "text-[#ff00ff]"}`}>
                 {result}
               </p>
             )}

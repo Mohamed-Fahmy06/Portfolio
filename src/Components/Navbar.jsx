@@ -16,23 +16,23 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   ];
 
   const lightColors = {
-    navBg: 'bg-linear-to-br from-orange-200 to-white',
+    navBg: 'bg-white/80',
     textPrimary: 'text-gray-900',
     textSecondary: 'text-gray-600',
-    textHover: 'text-orange-500',
-    textActive: 'text-orange-700',
-    indicator: 'from-orange-500 to-amber-500',
-    button: 'from-orange-500 to-amber-500'
+    textHover: 'text-[#00f3ff]',
+    textActive: 'text-[#00f3ff]',
+    indicator: 'from-[#00f3ff] to-[#ff00ff]',
+    button: 'from-[#00f3ff] to-[#bc13fe]'
   };
 
   const darkColors = {
-    navBg: 'bg-linear-to-br from-gray-500 to-black',
+    navBg: 'bg-[#020617]/80',
     textPrimary: 'text-white',
-    textSecondary: 'text-gray-300',
-    textHover: 'text-orange-400',
-    textActive: 'text-orange-500',
-    indicator: 'from-orange-500 to-amber-500',
-    button: 'from-orange-500 to-amber-500'
+    textSecondary: 'text-gray-400',
+    textHover: 'text-[#00f3ff]',
+    textActive: 'text-[#00f3ff]',
+    indicator: 'from-[#00f3ff] to-[#ff00ff]',
+    button: 'from-[#00f3ff] to-[#bc13fe]'
   };
 
   const colors = darkMode ? darkColors : lightColors;
@@ -49,7 +49,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`flex items-center justify-center ${colors.navBg}
-        backdrop-blur-lg rounded-2xl px-4 lg:px-8 py-2 shadow-lg mt-2`}
+        backdrop-blur-lg rounded-2xl px-4 lg:px-8 py-2 shadow-lg mt-2 
+        border ${darkMode ? 'border-[#00f3ff]/30 shadow-[#00f3ff]/10' : 'border-gray-200'}`}
       >
         <div className="flex items-center justify-between w-full space-x-6 lg:space-x-8">
           {/* logo */}
@@ -58,9 +59,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <span className={`text-xl font-bold ${colors.textPrimary}`}>
+            <span className={`text-xl font-bold font-orbitron ${colors.textPrimary}`}>
               Portfolio
-              <span className="text-orange-500">.</span>
+              <span className="text-[#00f3ff]">.</span>
             </span>
           </motion.a>
 
@@ -78,7 +79,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     ${
                       activeSection === item.name.toLowerCase()
                         ? colors.textActive
-                        : `${colors.textSecondary} hover:text-orange-500`
+                        : `${colors.textSecondary} hover:text-[#00f3ff]`
                     }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -88,7 +89,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 {activeSection === item.name.toLowerCase() && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className={`absolute bottom-1 left-0 right-0 h-0.5 bg-linear-to-r rounded-full ${colors.indicator}`}
+                    className={`absolute bottom-1 left-0 right-0 h-0.5 bg-linear-to-r rounded-full ${colors.indicator} shadow-[0_0_10px_#00f3ff]`}
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
                     transition={{ duration: 0.3 }}
@@ -106,8 +107,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               onClick={toggleDarkMode}
               className={`p-2 rounded-full ${
                 darkMode
-                  ? "bg-gray-600 text-white"
-                  : "bg-gray-300 text-gray-900"
+                  ? "bg-gray-800 text-[#00f3ff] border border-[#00f3ff]/30"
+                  : "bg-gray-100 text-gray-700 border border-gray-200"
               } transition-colors`}
               aria-label={
                 darkMode ? "Switch to light mode" : "Switch to dark mode"
@@ -123,9 +124,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             {/* button */}
             <motion.a
               href="#Contact"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 20px #ff00ff" }}
               whileTap={{ scale: 0.95 }}
-              className={`hidden lg:block px-6 py-2 font-semibold ${colors.button} rounded-full bg-linear-to-r text-white shadow-lg hover:shadow-xl transition-shadow`}
+              className={`hidden lg:block px-6 py-2 font-semibold ${colors.button} rounded-full bg-linear-to-r text-white shadow-lg transition-shadow border border-[#ff00ff]/50`}
             >
               Hire me
             </motion.a>
