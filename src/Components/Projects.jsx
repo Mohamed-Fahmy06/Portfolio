@@ -1,6 +1,8 @@
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import noxeImg from "../assets/Noxe.png";
 import shadow_stalkers from "../assets/shadow-stalkers.png";
+import physicalTherapy from "../assets/physical-therapy.png";
+import saasDashboard from "../assets/saas-dashboard.png";
 
 const Projects = ({ darkMode }) => {
   const projectsList = [
@@ -34,6 +36,26 @@ const Projects = ({ darkMode }) => {
       tags: ["React", "Express", "Node.js", "SQL.js", "JWT"],
       codeLink: "https://github.com/Mohamed-Fahmy06/Shadow-stalkers.git",
       demoLink: "https://shadow-stalkers.vercel.app/",
+    },
+    {
+      id: 4,
+      title: "Because Life is Precious",
+      des: "A professional landing page for a physical therapy clinic, focusing on patient recovery, personalized care, and mobile-friendly design.",
+      image: physicalTherapy,
+      alt: "Physical Therapy Clinic",
+      tags: ["HTML", "CSS", "JavaScript"],
+      codeLink: "https://github.com/Mohamed-Fahmy06/Decodelabs-Project1.git",
+      demoLink: "https://decodelabs-project1.vercel.app/",
+    },
+    {
+      id: 5,
+      title: "Nexus SaaS",
+      des: "A modern SaaS dashboard prototype featuring a clean UI, analytics overview, and seamless user authentication flow.",
+      image: saasDashboard,
+      alt: "Nexus SaaS Dashboard",
+      tags: ["HTML", "CSS", "UI/UX", "SaaS"],
+      codeLink: "https://github.com/Mohamed-Fahmy06/Decodelabs-Project2.git",
+      demoLink: "https://decodelabs-project2.vercel.app/",
     },
   ];
 
