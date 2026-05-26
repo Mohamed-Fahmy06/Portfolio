@@ -23,19 +23,19 @@ const Hero = ({ darkMode }) => {
   ];
 
   const darkTheme = {
-    textPrimary: "text-white neon-glow-cyan",
+    textPrimary: "text-white",
     textSecondary: "text-gray-400",
     buttonSecondary:
-      "text-white border border-[#ff00ff]/50 hover:bg-[#ff00ff]/10 shadow-[0_0_15px_rgba(255,0,255,0.2)]",
-    decorativeCircle: "bg-[#00f3ff] opacity-5",
+      "text-white border border-gray-700 hover:bg-gray-800",
+    decorativeCircle: "bg-[#38bdf8] opacity-5",
   };
 
   const lightTheme = {
     textPrimary: "text-gray-900",
     textSecondary: "text-gray-700",
     buttonSecondary:
-      "text-gray-800 border-2 border-[#00f3ff] hover:bg-[#00f3ff] hover:text-white",
-    decorativeCircle: "bg-[#00f3ff] opacity-5",
+      "text-gray-800 border-2 border-[#38bdf8] hover:bg-[#38bdf8] hover:text-white",
+    decorativeCircle: "bg-[#38bdf8] opacity-5",
   };
 
   const theme = darkMode ? darkTheme : lightTheme;
@@ -67,14 +67,14 @@ const Hero = ({ darkMode }) => {
                   href={social.href}
                   target="_blank"
                   data-aos-delay={`${400 + index * 100}`}
-                  className="transform hover:scale-130 transition-all duration-300
-                    decoration-800 rounded-full text-4xl hover:shadow-[0_0_15px_#00f3ff]"
+                  className="transform hover:scale-120 transition-all duration-300
+                    rounded-full text-4xl"
                 >
                   <span
                     className={`${
                       darkMode
-                        ? "text-gray-600 hover:text-[#00f3ff]"
-                        : "text-gray-300 hover:text-[#00f3ff]"
+                        ? "text-gray-600 hover:text-[#38bdf8]"
+                        : "text-gray-300 hover:text-[#38bdf8]"
                     }`}
                   >
                     {social.icon}
@@ -87,14 +87,14 @@ const Hero = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] to-[#ff00ff]">Mohamed Fahmy</span>
+              Hi, I'm <span className="text-[#38bdf8]">Mohamed Fahmy</span>
             </h1>
             <p
               className={`mb-6 sm:mb-8 leading-relaxed max-w-md sm:max-w-lg text-lg sm:text-xl font-medium ${theme.textSecondary}`}
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              I'm a passionate developer creating <span className="text-[#00f3ff]">amazing</span> web experiences.
+              I'm a passionate developer creating <span className="text-[#38bdf8]">efficient</span> web solutions.
             </p>
             {/* buttons */}
             <div className="w-full pt-4 sm:pt-6">
@@ -108,10 +108,10 @@ const Hero = ({ darkMode }) => {
                   href={Mohamed_Fahmy_CV}
                   download
                   className="w-full sm:w-auto inline-flex items-center justify-center text-white
-                                  bg-gradient-to-r from-[#00f3ff] to-[#bc13fe]
-                                  border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgba(0,243,255,0.6)]
-                                  rounded-full text-base sm:text-lg font-bold transition-all duration-200 transform
-                                  border border-[#00f3ff]/50 animate-pulse-cyan"
+                                  bg-linear-to-r from-[#38bdf8] to-[#0284c7]
+                                  py-3 px-6 sm:px-8 hover:brightness-110
+                                  rounded-lg text-base sm:text-lg font-bold transition-all duration-200 transform
+                                  border border-[#38bdf8]/30"
                 >
                   <DownloadIcon className="w-5 h-5 sm:h-6 sm:w-6 mr-2" />
                   Download CV
@@ -119,8 +119,7 @@ const Hero = ({ darkMode }) => {
                 <a
                   href="https://wa.me/201103149905"
                   className={`w-full sm:w-auto inline-flex items-center ${theme.buttonSecondary} justify-center
-                                      py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgba(255,0,255,0.4)]
-                                      rounded-full text-base sm:text-lg font-bold transition-all duration-200 transform
+                                      py-3 px-6 sm:px-8 rounded-lg text-base sm:text-lg font-bold transition-all duration-200 transform
                                       ${
                                         darkMode
                                           ? "text-white"
@@ -140,9 +139,7 @@ const Hero = ({ darkMode }) => {
             data-aos-delay="400"
           >
             <div className="relative w-4/5 sm:w3/4 lg:w-full">
-              <div className="relative overflow-hidden group">
-                {/* Image frame */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#00f3ff] to-[#ff00ff] rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative overflow-hidden group tech-border p-2">
                 <img
                   src={Avatar}
                   alt=""

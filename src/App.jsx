@@ -40,7 +40,10 @@ const App = () => {
       }
     >
       {darkMode && (
-        <div className="fixed inset-0 cyber-grid pointer-events-none opacity-20"></div>
+        <>
+          <div className="fixed inset-0 cyber-grid pointer-events-none opacity-30"></div>
+          <div className="fixed inset-0 scan-line pointer-events-none z-50"></div>
+        </>
       )}
       <div className="relative z-10">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

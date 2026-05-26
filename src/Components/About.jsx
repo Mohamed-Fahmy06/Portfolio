@@ -1,5 +1,5 @@
 import ABout from "../assets/ABout.png";
-import { GraduationCap, Briefcase, Layout, ArrowRight } from "lucide-react";
+import { GraduationCap, Briefcase, Layout } from "lucide-react";
 
 const About = ({ darkMode }) => {
   return (
@@ -20,13 +20,13 @@ const About = ({ darkMode }) => {
             {/* image background decoration */}
             <div
               className="absolute -inset-5 lg:-inset-20 
-                      bg-linear-to-br from-[#00f3ff] via-[#ff00ff] to-[#bc13fe] rotate-12 opacity-20 blur-2xl z-0"
+                      bg-[#38bdf8] rotate-12 opacity-5 blur-3xl z-0"
               data-aos="zoom-in"
               data-aos-delay="600"
             ></div>
             <div
               className="absolute -inset-2 lg:-inset-4 
-                      bg-linear-to-tr from-[#00f3ff]/20 to-transparent rounded-3xl rotate-6 z-0 border border-[#00f3ff]/30"
+                      bg-gradient-to-tr from-[#38bdf8]/10 to-transparent rounded-3xl rotate-6 z-0 border border-[#38bdf8]/10"
               data-aos="fade-up"
               data-aos-delay="700"
             ></div>
@@ -48,12 +48,11 @@ const About = ({ darkMode }) => {
         >
           <header>
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-2" data-aos="fade-up" data-aos-delay="350">
-              <span className="w-8 h-0.5 bg-[#00f3ff]"></span>
-              <span className="text-[#00f3ff] font-medium uppercase tracking-wider text-sm font-orbitron">Get to know me</span>
+              <span className="w-8 h-[2px] bg-[#38bdf8]"></span>
+              <span className="text-[#38bdf8] font-medium uppercase tracking-wider text-sm font-orbitron">Identification</span>
             </div>
             <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent font-orbitron
-            bg-linear-to-r from-[#00f3ff] via-[#ff00ff] to-[#bc13fe] bg-clip-text neon-glow-cyan"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white font-orbitron"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -63,20 +62,20 @@ const About = ({ darkMode }) => {
 
           <div
             className={`text-sm sm:text-base lg:text-lg mb-8 leading-relaxed space-y-4
-            border-l-4 border-[#ff00ff] p-4 sm:p-6 rounded-r-2xl
-            backdrop-blur-sm shadow-xl shadow-[#ff00ff]/5
-            ${darkMode ? "text-gray-300 bg-white/5 border-r border-t border-b border-white/10" : "text-gray-700 bg-[#00f3ff]/5"}`}
+            border-l-4 border-[#38bdf8] p-4 sm:p-6 rounded-r-xl
+            backdrop-blur-sm shadow-xl
+            ${darkMode ? "text-gray-300 bg-white/5 border-r border-t border-b border-white/5" : "text-gray-700 bg-[#38bdf8]/5"}`}
             data-aos="fade-up"
             data-aos-delay="500"
           >
             <p>
-              I’m a <span className="text-[#00f3ff] font-semibold text-lg italic">Full-Stack Web Developer</span> with a strong passion for building
+              I’m a <span className="text-[#38bdf8] font-semibold text-lg italic">Full-Stack Web Developer</span> with a strong passion for building
               scalable, real-world web solutions. I started my journey in web
               development early during my first year of high school, which gave me
               a solid technical foundation and a long-term vision in the field.
             </p>
             <p>
-              By my second year, I was already working as a <span className="text-[#ff00ff] font-semibold italic text-lg">Trainer</span>, helping others
+              By my second year, I was already working as a <span className="text-[#38bdf8] font-semibold italic text-lg">Trainer</span>, helping others
               learn web development—an experience that sharpened both my technical
               depth and my ability to break down complex concepts clearly.
             </p>
@@ -90,20 +89,20 @@ const About = ({ darkMode }) => {
           <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-8">
             {/* Years Education */}
             <div
-              className={`p-4 rounded-2xl transition-all duration-300 hover:-translate-y-2 group
-              ${darkMode ? "bg-white/5 border border-white/10 hover:border-[#00f3ff]/50 hover:shadow-[0_0_15px_rgba(0,243,255,0.2)]" : "bg-gray-50 border border-gray-200 shadow-md"}`}
+              className={`p-4 rounded-xl transition-all duration-300 hover:-translate-y-2 group
+              ${darkMode ? "bg-white/5 border border-white/5 hover:border-[#38bdf8]/30" : "bg-gray-50 border border-gray-200 shadow-md"}`}
               data-aos="zoom-in"
               data-aos-delay="600"
             >
-              <div className="flex justify-center lg:justify-start mb-2 text-[#00f3ff] group-hover:animate-pulse">
+              <div className="flex justify-center lg:justify-start mb-2 text-[#38bdf8]">
                 <GraduationCap size={24} />
               </div>
-              <div className="text-xl sm:text-2xl font-bold text-[#00f3ff] font-orbitron">
+              <div className="text-xl sm:text-2xl font-bold text-white font-orbitron">
                 3+
               </div>
               <div
                 className={`text-[10px] sm:text-xs font-medium uppercase tracking-tighter
-                ${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                ${darkMode ? "text-gray-500" : "text-gray-600"}`}
               >
                 Years Education
               </div>
@@ -111,20 +110,20 @@ const About = ({ darkMode }) => {
 
             {/* Years of Experience */}
             <div
-              className={`p-4 rounded-2xl transition-all duration-300 hover:-translate-y-2 group
-              ${darkMode ? "bg-white/5 border border-white/10 hover:border-[#ff00ff]/50 hover:shadow-[0_0_15px_rgba(255,0,255,0.2)]" : "bg-gray-50 border border-gray-200 shadow-md"}`}
+              className={`p-4 rounded-xl transition-all duration-300 hover:-translate-y-2 group
+              ${darkMode ? "bg-white/5 border border-white/5 hover:border-[#38bdf8]/30" : "bg-gray-50 border border-gray-200 shadow-md"}`}
               data-aos="zoom-in"
               data-aos-delay="700"
             >
-              <div className="flex justify-center lg:justify-start mb-2 text-[#ff00ff] group-hover:animate-pulse">
+              <div className="flex justify-center lg:justify-start mb-2 text-[#38bdf8]">
                 <Briefcase size={24} />
               </div>
-              <div className="text-xl sm:text-2xl font-bold text-[#ff00ff] font-orbitron">
+              <div className="text-xl sm:text-2xl font-bold text-white font-orbitron">
                 1+
               </div>
               <div
                 className={`text-[10px] sm:text-xs font-medium uppercase tracking-tighter
-                ${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                ${darkMode ? "text-gray-500" : "text-gray-600"}`}
               >
                 Experience
               </div>
@@ -132,20 +131,20 @@ const About = ({ darkMode }) => {
 
             {/* Projects completed */}
             <div
-              className={`p-4 rounded-2xl transition-all duration-300 hover:-translate-y-2 group
-                ${darkMode ? "bg-white/5 border border-white/10 hover:border-[#bc13fe]/50 hover:shadow-[0_0_15px_rgba(188,19,254,0.2)]" : "bg-gray-50 border border-gray-200 shadow-md"}`}
+              className={`p-4 rounded-xl transition-all duration-300 hover:-translate-y-2 group
+                ${darkMode ? "bg-white/5 border border-white/5 hover:border-[#38bdf8]/30" : "bg-gray-50 border border-gray-200 shadow-md"}`}
               data-aos="zoom-in"
               data-aos-delay="800"
             >
-              <div className="flex justify-center lg:justify-start mb-2 text-[#bc13fe] group-hover:animate-pulse">
+              <div className="flex justify-center lg:justify-start mb-2 text-[#38bdf8]">
                 <Layout size={24} />
               </div>
-              <div className="text-xl sm:text-2xl font-bold text-[#bc13fe] font-orbitron">
+              <div className="text-xl sm:text-2xl font-bold text-white font-orbitron">
                 5+
               </div>
               <div
                 className={`text-[10px] sm:text-xs font-medium uppercase tracking-tighter
-                ${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                ${darkMode ? "text-gray-500" : "text-gray-600"}`}
               >
                 Projects
               </div>
@@ -158,4 +157,3 @@ const About = ({ darkMode }) => {
 };
 
 export default About;
-

@@ -3,9 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --neon-cyan: #00f3ff;
-  --neon-pink: #ff00ff;
-  --neon-purple: #bc13fe;
+  --accent-blue: #38bdf8; /* Sky 400 - Tech Blue */
+  --accent-cyan: #06b6d4; /* Cyan 500 */
   --dark-bg: #020617;
 }
 
@@ -31,38 +30,55 @@ html {
 /* Cyberpunk Grid Background */
 .cyber-grid {
   background-image: 
-    linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
-/* Neon Glow Utilities */
-.neon-glow-cyan {
-  text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
+/* Tech Borders */
+.tech-border {
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  position: relative;
 }
 
-.neon-glow-pink {
-  text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
+.tech-border::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--accent-blue);
+  border-left: 2px solid var(--accent-blue);
 }
 
-.neon-border-cyan {
-  border: 1px solid var(--neon-cyan);
-  box-shadow: 0 0 5px var(--neon-cyan), inset 0 0 5px var(--neon-cyan);
-}
-
-.neon-border-pink {
-  border: 1px solid var(--neon-pink);
-  box-shadow: 0 0 5px var(--neon-pink), inset 0 0 5px var(--neon-pink);
+.tech-border::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--accent-blue);
+  border-right: 2px solid var(--accent-blue);
 }
 
 /* Animations */
-@keyframes pulse-cyan {
-  0%, 100% { box-shadow: 0 0 5px var(--neon-cyan); }
-  50% { box-shadow: 0 0 20px var(--neon-cyan); }
+@keyframes scanning {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
 
-.animate-pulse-cyan {
-  animation: pulse-cyan 2s infinite;
+.scan-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--accent-blue), transparent);
+  opacity: 0.1;
+  animation: scanning 4s linear infinite;
+}
+
+.hover-glitch:hover {
+  animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;
 }
 
 @keyframes glitch {
@@ -72,10 +88,6 @@ html {
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
   100% { transform: translate(0); }
-}
-
-.hover-glitch:hover {
-  animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;
 }
 
 .star-shape {

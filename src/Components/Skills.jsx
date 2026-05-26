@@ -16,61 +16,61 @@ const Skills = ({ darkMode }) => {
       name: "React",
       level: 30,
       icon: <FaReact />,
-      color: "from-[#00f3ff] to-[#bc13fe]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "Tailwind CSS",
       level: 100,
       icon: <RiTailwindCssFill />,
-      color: "from-[#00f3ff] to-[#ff00ff]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "HTML",
       level: 100,
       icon: <FaHtml5 />,
-      color: "from-[#ff00ff] to-[#bc13fe]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "CSS",
       level: 100,
       icon: <FaCss />,
-      color: "from-[#00f3ff] to-blue-500",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "Node.js",
       level: 25,
       icon: <FaNodeJs />,
-      color: "from-green-400 to-[#00f3ff]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "JavaScript",
       level: 25,
       icon: <FaNodeJs />,
-      color: "from-[#00f3ff] to-[#ff00ff]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "C++",
       level: 35,
       icon: <FaC />,
-      color: "from-[#38AECC] to-[#00f3ff]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "C",
       level: 40,
       icon: <FaC />,
-      color: "from-red-400 to-[#ff00ff]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "Python",
       level: 10,
       icon: <FaPython />,
-      color: "from-[#bc13fe] to-[#ff00ff]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
     {
       name: "Problem Solving",
       level: 65,
       icon: <BsFillPuzzleFill />,
-      color: "from-[#00f3ff] to-[#bc13fe]",
+      color: "from-[#38bdf8] to-[#0ea5e9]",
     },
   ];
 
@@ -84,19 +84,9 @@ const Skills = ({ darkMode }) => {
         <div className="container px-5 py-14 mx-auto">
           <div className="text-center mb-20" data-aos="fade-up">
             <h1
-              className="sm:text-4xl text-3xl font-bold title-font mb-4 font-orbitron"
-              style={{ color: darkMode ? "white" : "#1f2937" }}
+              className="sm:text-4xl text-3xl font-bold title-font mb-4 font-orbitron text-white"
             >
-              My{" "}
-              <span
-                style={{
-                  background: "linear-gradient(to right, #00f3ff, #ff00ff)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                Skills
-              </span>
+              My <span className="text-[#38bdf8]">Skills</span>
             </h1>
             <p
               className="max-w-2xl mx-auto leading-relaxed text-lg "
@@ -121,26 +111,17 @@ const Skills = ({ darkMode }) => {
                 data-aos-delay={`${300 + index * 100}`}
               >
                 <div
-                  className={`h-full p-6 rounded-2xl border transition-all duration-300
+                  className={`h-full p-6 rounded-xl border transition-all duration-300
                     hover:translate-y-2 group
-                    ${darkMode ? 'border-white/10 hover:border-[#00f3ff]/50 hover:shadow-[0_0_20px_rgba(0,243,255,0.15)]' : 'border-gray-200 hover:border-[#00f3ff]/50'}`}
-                  style={{
-                    background: darkMode
-                      ? "linear-gradient(to bottom right, #0f172a, #020617)"
-                      : "linear-gradient(to bottom right, #ffffff, #f3f4f6)",
-                  }}
+                    ${darkMode ? 'border-white/5 bg-white/5 hover:border-[#38bdf8]/30' : 'border-gray-200 bg-white hover:border-[#38bdf8]/30'}`}
                 >
                   <div className="flex items-center mb-6">
                     <div
-                      style={{
-                        background: darkMode
-                          ? "linear-gradient(to bottom right, #1e293b, #0f172a)"
-                          : "linear-gradient(to bottom right, #f3f4f6, #e5e7eb)",
-                      }}
-                      className="w-16 h-16 text-4xl rounded-xl p-3 
+                      className={`w-16 h-16 text-4xl rounded-xl p-3 
                       flex items-center justify-center 
-                      group-hover:scale-110 group-hover:text-[#00f3ff] transition-all duration-300
-                      border border-white/5 group-hover:border-[#00f3ff]/30"
+                      group-hover:scale-110 group-hover:text-[#38bdf8] transition-all duration-300
+                      border border-white/5 group-hover:border-[#38bdf8]/30
+                      ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}
                     >
                       <span className="object-contain">{skill.icon}</span>
                     </div>
@@ -159,14 +140,7 @@ const Skills = ({ darkMode }) => {
                       Proficiency:{" "}
                     </span>
                     <span
-                      style={{
-                        background:
-                          "linear-gradient(to right, #00f3ff, #ff00ff)",
-                        WebkitBackgroundClip: "text",
-                        backgroundClip: "text",
-                        color: "transparent",
-                      }}
-                      className="font-bold font-orbitron"
+                      className="font-bold font-orbitron text-[#38bdf8]"
                     >
                       {skill.level}%
                     </span>
@@ -179,7 +153,7 @@ const Skills = ({ darkMode }) => {
                   >
                     <div
                       className={`h-full rounded-full bg-linear-to-r 
-                      ${skill.color} transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(0,243,255,0.5)]`}
+                      ${skill.color} transition-all duration-1000 ease-out`}
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
@@ -189,11 +163,7 @@ const Skills = ({ darkMode }) => {
                   >
                     <div
                       className="h-1 rounded-full opacity-70 
-                    group-hover:w-full transition-all duration-500 w-1/3"
-                      style={{
-                        background:
-                          "linear-gradient(to right, #00f3ff, #ff00ff)",
-                      }}
+                    group-hover:w-full transition-all duration-500 w-1/3 bg-[#38bdf8]"
                     ></div>
                   </div>
                 </div>

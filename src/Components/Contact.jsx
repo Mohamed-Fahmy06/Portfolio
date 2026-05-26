@@ -47,17 +47,7 @@ const Contact = ({ darkMode }) => {
               color: darkMode ? "white" : "#1f2937",
             }}
           >
-            Get In{" "}
-            <span
-              style={{
-                background: "linear-gradient(to right, #00f3ff, #ff00ff)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              Touch
-            </span>
+            Get In <span className="text-[#38bdf8]">Touch</span>
           </h2>
 
           <p
@@ -77,7 +67,7 @@ const Contact = ({ darkMode }) => {
             className="flex justify-center order-2 lg:order-1 relative group"
             data-aos="fade-right"
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#00f3ff] to-[#ff00ff] rounded-full blur-3xl opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+            <div className="absolute -inset-4 bg-[#38bdf8] rounded-full blur-3xl opacity-5 group-hover:opacity-10 transition duration-1000"></div>
             <img
               src={contac}
               alt=""
@@ -86,13 +76,8 @@ const Contact = ({ darkMode }) => {
           </div>
           <form
             onSubmit={onSubmit}
-            style={{
-              background: darkMode
-                ? "linear-gradient(to right, #0f172a, #020617)"
-                : "linear-gradient(to right, #ffffff, #f9fafb)",
-              borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#e5e7eb",
-            }}
-            className="rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg order1 lg:order-2 caret-white"
+            className={`rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg order1 lg:order-2 caret-white
+              ${darkMode ? 'bg-white/5 border-white/5' : 'bg-white border-gray-200'}`}
             data-aos="fade-left"
           >
             <input
@@ -115,12 +100,12 @@ const Contact = ({ darkMode }) => {
                 name="first_name"
                 placeholder="First Name"
                 style={{
-                  backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                  backgroundColor: darkMode ? "#1e293b" : "#f1f5f9",
                   borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
-                  color: darkMode ? "white" : "#1f2973",
+                  color: darkMode ? "white" : "#1f2937",
                 }}
                 className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all font-medium"
+              focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/50 transition-all font-medium"
                 required
               />
               {/* Last Name */}
@@ -129,12 +114,12 @@ const Contact = ({ darkMode }) => {
                 name="last_name"
                 placeholder="Last Name"
                 style={{
-                  backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                  backgroundColor: darkMode ? "#1e293b" : "#f1f5f9",
                   borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
-                  color: darkMode ? "white" : "#1f2973",
+                  color: darkMode ? "white" : "#1f2937",
                 }}
                 className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all font-medium"
+              focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/50 transition-all font-medium"
                 required
               />
             </div>
@@ -144,12 +129,12 @@ const Contact = ({ darkMode }) => {
               name="email"
               placeholder="Email Address"
               style={{
-                backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                backgroundColor: darkMode ? "#1e293b" : "#f1f5f9",
                 borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
-                color: darkMode ? "white" : "#1f2973",
+                color: darkMode ? "white" : "#1f2937",
               }}
               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all mb-4 sm:mb-6 font-medium"
+              focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/50 transition-all mb-4 sm:mb-6 font-medium"
               required
             />
             {/* Phone Number */}
@@ -158,12 +143,12 @@ const Contact = ({ darkMode }) => {
               name="phone"
               placeholder="Phone Number"
               style={{
-                backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                backgroundColor: darkMode ? "#1e293b" : "#f1f5f9",
                 borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
-                color: darkMode ? "white" : "#1f2973",
+                color: darkMode ? "white" : "#1f2937",
               }}
               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all mb-4 sm:mb-6 font-medium"
+              focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/50 transition-all mb-4 sm:mb-6 font-medium"
               required
             />
             {/* Message */}
@@ -172,27 +157,24 @@ const Contact = ({ darkMode }) => {
               rows="4"
               placeholder="Your Message"
               style={{
-                backgroundColor: darkMode ? "#1e293b" : "#faede3",
+                backgroundColor: darkMode ? "#1e293b" : "#f1f5f9",
                 borderColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "#d1d5db",
-                color: darkMode ? "white" : "#1f2973",
+                color: darkMode ? "white" : "#1f2937",
               }}
               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base 
-              focus:border-[#00f3ff] focus:ring-2 focus:ring-[#00f3ff]/20 transition-all mb-4 sm:mb-6 resize-none font-medium"
+              focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/50 transition-all mb-4 sm:mb-6 resize-none font-medium"
               required
             />
             <button
               type="submit"
               disabled={isSubmitting}
-              style={{
-                background: "linear-gradient(to right, #00f3ff, #ff00ff)",
-              }}
               className="w-full py-2 sm:py-3 text-white font-bold rounded-lg text-sm sm:text-base font-orbitron
-                hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] hover:scale-[1.02] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                bg-linear-to-r from-[#38bdf8] to-[#0284c7] hover:brightness-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
             {result && (
-              <p className={`mt-4 text-center text-sm font-bold font-orbitron ${result === "Message Sent Successfully!" ? "text-[#00f3ff]" : "text-[#ff00ff]"}`}>
+              <p className={`mt-4 text-center text-sm font-bold font-orbitron ${result === "Message Sent Successfully!" ? "text-[#38bdf8]" : "text-red-500"}`}>
                 {result}
               </p>
             )}
