@@ -107,7 +107,7 @@ const Projects = ({ darkMode }) => {
             >
               {/* Image Container */}
               <div className="h-48 overflow-hidden relative group/img">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10 opacity-80" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#020617] via-transparent to-transparent z-10 opacity-80" />
                 <img
                   src={project.image}
                   alt={project.alt}
@@ -116,7 +116,7 @@ const Projects = ({ darkMode }) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col grow">
                 <h3
                   className="text-xl font-bold mb-3 font-orbitron group-hover:text-[#00f3ff] transition-colors"
                   style={{ color: darkMode ? "white" : "#1f2937" }}
@@ -183,7 +183,7 @@ const Projects = ({ darkMode }) => {
               background: "linear-gradient(to right, #00f3ff, #ff00ff)",
             }}
             className="inline-flex items-center gap-3 px-8 py-4 font-bold text-white text-base rounded-full font-orbitron
-                    hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all hover:shadow-2xl hover:-translate-y-1"
+                      transition-all hover:shadow-2xl hover:-translate-y-1"
           >
             <FaGithub className="text-2xl" /> View all projects
           </a>

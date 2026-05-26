@@ -20,13 +20,13 @@ const About = ({ darkMode }) => {
             {/* image background decoration */}
             <div
               className="absolute -inset-5 lg:-inset-20 
-                      bg-gradient-to-br from-[#00f3ff] via-[#ff00ff] to-[#bc13fe] rotate-12 opacity-20 blur-2xl z-0"
+                      bg-linear-to-br from-[#00f3ff] via-[#ff00ff] to-[#bc13fe] rotate-12 opacity-20 blur-2xl z-0"
               data-aos="zoom-in"
               data-aos-delay="600"
             ></div>
             <div
               className="absolute -inset-2 lg:-inset-4 
-                      bg-gradient-to-tr from-[#00f3ff]/20 to-transparent rounded-3xl rotate-6 z-0 border border-[#00f3ff]/30"
+                      bg-linear-to-tr from-[#00f3ff]/20 to-transparent rounded-3xl rotate-6 z-0 border border-[#00f3ff]/30"
               data-aos="fade-up"
               data-aos-delay="700"
             ></div>
@@ -53,7 +53,7 @@ const About = ({ darkMode }) => {
             </div>
             <h1
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent font-orbitron
-            bg-gradient-to-r from-[#00f3ff] via-[#ff00ff] to-[#bc13fe] bg-clip-text neon-glow-cyan"
+            bg-linear-to-r from-[#00f3ff] via-[#ff00ff] to-[#bc13fe] bg-clip-text neon-glow-cyan"
               data-aos="fade-up"
               data-aos-delay="400"
             >
