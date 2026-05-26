@@ -151,21 +151,6 @@ const About = ({ darkMode }) => {
               </div>
             </div>
           </div>
-
-          <button
-            className={`group w-full sm:w-auto inline-flex items-center justify-center gap-2
-                  border-2 border-orange-500 py-3 px-8 rounded-full text-lg font-bold
-                  transition-all duration-300 transform hover:scale-105 active:scale-95
-                  hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
-                  ${darkMode 
-                    ? "text-white bg-orange-500/10 hover:bg-orange-500" 
-                    : "text-orange-600 bg-white hover:bg-orange-500 hover:text-white"}`}
-            data-aos="fade-up"
-            data-aos-delay="900"
-          >
-            Download CV
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-          </button>
         </article>
       </div>
     </section>
