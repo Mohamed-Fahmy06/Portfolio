@@ -57,6 +57,26 @@ const Projects = ({ darkMode }) => {
       codeLink: "https://github.com/Mohamed-Fahmy06/Decodelabs-Project2.git",
       demoLink: "https://decodelabs-project2.vercel.app/",
     },
+    {
+      id: 6,
+      title: "V-ROOMS",
+      des: "An immersive platform for booking virtual collaborative spaces, featuring interactive environments and a sleek booking system.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop",
+      alt: "V-ROOMS",
+      tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+      codeLink: "https://github.com/Mohamed-Fahmy06/Decodelabs_Project3.git",
+      demoLink: "https://decodelabs-project3.vercel.app/",
+    },
+    {
+      id: 7,
+      title: "Code Zone - Batch 2026",
+      des: "A comprehensive multi-step application portal for developer training, featuring advanced form validation and track selection.",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2340&auto=format&fit=crop",
+      alt: "Code Zone - Batch 2026",
+      tags: ["HTML", "CSS", "JavaScript", "Form Logic"],
+      codeLink: "https://github.com/Mohamed-Fahmy06/Decodelabs_Project4.git",
+      demoLink: "https://decodelabs-project4.vercel.app/",
+    },
   ];
 
   return (

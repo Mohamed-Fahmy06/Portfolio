@@ -140,7 +140,7 @@ const About = ({ darkMode }) => {
                 <Layout size={24} />
               </div>
               <div className="text-xl sm:text-2xl font-bold text-white font-orbitron">
-                5+
+                7+
               </div>
               <div
                 className={`text-[10px] sm:text-xs font-medium uppercase tracking-tighter
