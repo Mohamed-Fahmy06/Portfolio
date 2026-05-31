@@ -127,7 +127,7 @@ const Projects = ({ darkMode }) => {
             >
               {/* Image Container */}
               <div className="h-48 overflow-hidden relative group/img">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                 <img
                   src={project.image}
                   alt={project.alt}
@@ -136,7 +136,7 @@ const Projects = ({ darkMode }) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col grow">
                 <h3
                   className="text-xl font-bold mb-3"
                   style={{ color: darkMode ? "white" : "#1f2937" }}

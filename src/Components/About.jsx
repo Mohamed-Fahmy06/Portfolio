@@ -20,13 +20,13 @@ const About = ({ darkMode }) => {
             {/* image background decoration */}
             <div
               className="absolute -inset-5 lg:-inset-20 
-                      bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 rotate-12 star-shape opacity-20 blur-2xl z-0"
+                      bg-linear-to-br from-orange-400 via-orange-500 to-orange-600 rotate-12 star-shape opacity-20 blur-2xl z-0"
               data-aos="zoom-in"
               data-aos-delay="600"
             ></div>
             <div
               className="absolute -inset-2 lg:-inset-4 
-                      bg-gradient-to-tr from-orange-500/20 to-transparent rounded-3xl rotate-6 z-0"
+                      bg-linear-to-tr from-orange-500/20 to-transparent rounded-3xl rotate-6 z-0"
               data-aos="fade-up"
               data-aos-delay="700"
             ></div>
@@ -48,12 +48,12 @@ const About = ({ darkMode }) => {
         >
           <header>
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-2" data-aos="fade-up" data-aos-delay="350">
-              <span className="w-8 h-[2px] bg-orange-500"></span>
+              <span className="w-8 h-0.5 bg-orange-500"></span>
               <span className="text-orange-500 font-medium uppercase tracking-wider text-sm">Get to know me</span>
             </div>
             <h1
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent
-            bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text"
+            bg-linear-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -152,20 +152,6 @@ const About = ({ darkMode }) => {
             </div>
           </div>
 
-          <button
-            className={`group w-full sm:w-auto inline-flex items-center justify-center gap-2
-                  border-2 border-orange-500 py-3 px-8 rounded-full text-lg font-bold
-                  transition-all duration-300 transform hover:scale-105 active:scale-95
-                  hover:shadow-[0_0_30px_rgba(249,115,22,0.4)]
-                  ${darkMode 
-                    ? "text-white bg-orange-500/10 hover:bg-orange-500" 
-                    : "text-orange-600 bg-white hover:bg-orange-500 hover:text-white"}`}
-            data-aos="fade-up"
-            data-aos-delay="900"
-          >
-            Download CV
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-          </button>
         </article>
       </div>
     </section>
