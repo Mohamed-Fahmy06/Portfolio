@@ -92,7 +92,7 @@ const Projects = ({ darkMode }) => {
             >
               {/* Image Container */}
               <div className="h-48 overflow-hidden relative group/img">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10 opacity-60" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#020617] via-transparent to-transparent z-10 opacity-60" />
                 <img
                   src={project.image}
                   alt={project.alt}

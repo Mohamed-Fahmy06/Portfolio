@@ -26,7 +26,7 @@ const About = ({ darkMode }) => {
             ></div>
             <div
               className="absolute -inset-2 lg:-inset-4 
-                      bg-gradient-to-tr from-[#38bdf8]/10 to-transparent rounded-3xl rotate-6 z-0 border border-[#38bdf8]/10"
+                      bg-linear-to-tr from-[#38bdf8]/10 to-transparent rounded-3xl rotate-6 z-0 border border-[#38bdf8]/10"
               data-aos="fade-up"
               data-aos-delay="700"
             ></div>
@@ -48,7 +48,7 @@ const About = ({ darkMode }) => {
         >
           <header>
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-2" data-aos="fade-up" data-aos-delay="350">
-              <span className="w-8 h-[2px] bg-[#38bdf8]"></span>
+              <span className="w-8 h-0.5 bg-[#38bdf8]"></span>
               <span className="text-[#38bdf8] font-medium uppercase tracking-wider text-sm font-orbitron">Identification</span>
             </div>
             <h1
