@@ -24,18 +24,18 @@ const Hero = ({ darkMode }) => {
 
   const darkTheme = {
     textPrimary: "text-white",
-    textSecondary: "text-gray-400",
+    textSecondary: "text-gray-300",
     buttonSecondary:
-      "text-white border border-gray-700 hover:bg-gray-800",
-    decorativeCircle: "bg-[#38bdf8] opacity-5",
+      "text-white border-2 border-orange-500 hover:bg-orange-600",
+    decorativeCircle: "bg-orange-500 opacity-10",
   };
 
   const lightTheme = {
     textPrimary: "text-gray-900",
     textSecondary: "text-gray-700",
     buttonSecondary:
-      "text-gray-800 border-2 border-[#38bdf8] hover:bg-[#38bdf8] hover:text-white",
-    decorativeCircle: "bg-[#38bdf8] opacity-5",
+      "text-gray-800 border-2 border-orange-500 hover:bg-orange-500 hover:text-white",
+    decorativeCircle: "bg-orange-500 opacity-10",
   };
 
   const theme = darkMode ? darkTheme : lightTheme;
@@ -67,14 +67,14 @@ const Hero = ({ darkMode }) => {
                   href={social.href}
                   target="_blank"
                   data-aos-delay={`${400 + index * 100}`}
-                  className="transform hover:scale-120 transition-all duration-300
-                    rounded-full text-4xl"
+                  className="transform hover:scale-130 transition-transform
+                    decoration-800 rounded-full text-4xl"
                 >
                   <span
                     className={`${
                       darkMode
-                        ? "text-gray-600 hover:text-[#38bdf8]"
-                        : "text-gray-300 hover:text-[#38bdf8]"
+                        ? "text-gray-600 hover:text-white"
+                        : "text-gray-300 hover:text-gray-800"
                     }`}
                   >
                     {social.icon}
@@ -83,18 +83,18 @@ const Hero = ({ darkMode }) => {
               ))}
             </div>
             <h1
-              className={`title-font text-3xl sm:text-4xl lg:text-5xl mb-4 font-bold font-orbitron ${theme.textPrimary}`}
+              className={`title-font text-3xl sm:text-4xl lg:text-5xl mb-4 font-bold ${theme.textPrimary}`}
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              Hi, I'm <span className="text-[#38bdf8]">Mohamed Fahmy</span>
+              Hi, I'm Mohamed Fahmy
             </h1>
             <p
-              className={`mb-6 sm:mb-8 leading-relaxed max-w-md sm:max-w-lg text-lg sm:text-xl font-medium ${theme.textSecondary}`}
+              className={`mb-6 sm:mb-8 leading-relaxed max-w-md sm:max-w-lg text-lg sm:text-xl font-bold ${theme.textSecondary}`}
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              I'm a passionate developer creating <span className="text-[#38bdf8]">efficient</span> web solutions.
+              I'm a passionate developer creating amazing web experiences.
             </p>
             {/* buttons */}
             <div className="w-full pt-4 sm:pt-6">
@@ -108,10 +108,10 @@ const Hero = ({ darkMode }) => {
                   href={Mohamed_Fahmy_CV}
                   download
                   className="w-full sm:w-auto inline-flex items-center justify-center text-white
-                                  bg-linear-to-r from-[#38bdf8] to-[#0284c7]
-                                  py-3 px-6 sm:px-8 hover:brightness-110
-                                  rounded-lg text-base sm:text-lg font-bold transition-all duration-200 transform
-                                  border border-[#38bdf8]/30"
+                                  bg-linear-to-r from-orange-500 to-amber-500
+                                  border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.6)]
+                                  rounded-full text-base sm:text-lg font-semibold transition-all duration-200 transform
+                                  "
                 >
                   <DownloadIcon className="w-5 h-5 sm:h-6 sm:w-6 mr-2" />
                   Download CV
@@ -119,7 +119,8 @@ const Hero = ({ darkMode }) => {
                 <a
                   href="https://wa.me/201103149905"
                   className={`w-full sm:w-auto inline-flex items-center ${theme.buttonSecondary} justify-center
-                                      py-3 px-6 sm:px-8 rounded-lg text-base sm:text-lg font-bold transition-all duration-200 transform
+                                      border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.6)]
+                                      rounded-full text-base sm:text-lg font-semibold transition-all duration-200 transform
                                       ${
                                         darkMode
                                           ? "text-white"
@@ -139,12 +140,12 @@ const Hero = ({ darkMode }) => {
             data-aos-delay="400"
           >
             <div className="relative w-4/5 sm:w3/4 lg:w-full">
-              <div className="relative overflow-hidden group tech-border p-2">
+              <div className="relative overflow-hidden">
                 <img
                   src={Avatar}
                   alt=""
-                  className="relative w-full h-fit object-cover transform
-                            hover:scale-105 transition-transform duration-400"
+                  className=" w-full h-fit object-cover transform
+                            hover:scale-105 transition-transform duration-400 animate-pulse"
                 />
               </div>
             </div>
