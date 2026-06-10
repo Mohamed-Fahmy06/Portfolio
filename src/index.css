@@ -1,9 +1,15 @@
 @import 'tailwindcss';
 
+@theme {
+  --font-changa: "Changa", sans-serif;
+  --font-lemonada: "Lemonada", cursive;
+  --font-readex: "Readex Pro", sans-serif;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Readex Pro', sans-serif;
 }
 
 .dark{
